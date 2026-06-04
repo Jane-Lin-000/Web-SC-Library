@@ -1,0 +1,13 @@
+一、版號格式
+採用精簡語意化版號 MAJOR.MINOR.PATCH ，定義各層級的觸發條件，並規範 Version History 標題格式為 v1.3.0 | 2026Q2-S5 | 異動摘要 並描述摘要內容，每次 publish 前必須填寫。
+二、Version History 標題格式
+每次 Publish 前，於 Figma 的 Save to Version History 填寫標題，格式如下：
+v[版號]  |  [Sprint]  |  [異動摘要]
+範例：
+v1.3.0  |  2026Q2-S5  |  新增 DatePicker、修正 Button hover 色票
+v2.0.0  |  2026Q3-S1  |  重構 Form 元件群組，移除 Input-Legacy
+儲存 Version history 需確實填寫描述，在共用檔案 Library 中會顯示 Version history 的描述內容，協作者可清楚了解此次修改內容，並初步評估會影響的範圍。
+三、版號判斷流程
+本次 Sprint 有元件被移除、更名，或調整了 props（Properties）結構 → MAJOR
+本次 Sprint 新增了元件或新 Variant，且不影響舊有使用 → MINOR
+本次 Sprint 只有視覺調整或文件修正 → PATCH
